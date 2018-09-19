@@ -1,1 +1,1 @@
-Galeria Virtual Teste
+Galeria Virtual
