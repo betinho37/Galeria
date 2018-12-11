@@ -21,7 +21,7 @@ class Validator extends BaseValidator
     */
     protected function validateCelularComDdd($attribute, $value)
     {
-        return preg_match('/^\(\d{2}\)\d{4,5}-\d{4}$/', $value) > 0;
+        return preg_match('/^\(\d{2}\)\s?\d{4,5}-\d{4}$/', $value) > 0;
     }
  
     /**
@@ -33,7 +33,7 @@ class Validator extends BaseValidator
 
     protected function validateTelefoneComDdd($attribute, $value)
     {
-        return preg_match('/^\(\d{2}\)\d{4}-\d{4}$/', $value) > 0;  
+        return preg_match('/^\(\d{2}\)\s?\d{4}-\d{4}$/', $value) > 0;
     }
 
 
@@ -132,7 +132,7 @@ class Validator extends BaseValidator
         // Remove sequências repetidas como "111111111111"
         // https://github.com/LaravelLegends/pt-br-validator/issues/4
 
-        elseif (preg_match('/^(\d)\1{13}$/', $c) > 0) {
+        elseif (preg_match("/^{$c[0]}{14}$/", $c) > 0) {
 
             return false;
         }
