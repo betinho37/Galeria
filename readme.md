@@ -1,2 +1,1 @@
 Galeria Virtual
-#Beto#
