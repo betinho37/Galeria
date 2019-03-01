@@ -18,7 +18,6 @@
                       <a  href="{{asset('uploads/' . $publicacoes->arquivo)}}">
                         <img src="{{asset('uploads/' . $publicacoes->arquivo)}}"  alt="{{'uploads/' . $publicacoes->arquivo}}"
                           class="img-responsive"/></a>
-
                       </div>
                   </div>
                   <div class="text-item" >
